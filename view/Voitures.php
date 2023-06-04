@@ -149,10 +149,6 @@ if (isset($_GET['search_value'])) {
     <?php endforeach; ?>
 </div>
 
-    
-    
-
-   
       
 
 <br>

@@ -60,10 +60,7 @@ public function getrecord() {
       return $this->record;
      } 
 
-
-
 }
-
 
 
 

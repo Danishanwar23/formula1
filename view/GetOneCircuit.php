@@ -57,9 +57,6 @@ if (isset($_GET['id'])) {
             <h1>Réservez votre<br><span>formule 1</span> <br>Pour une course</h1>
             <p class="par">Choisissez la voiture de votre écuries préféré <br> et clizer vous dans la peau d'un vrais pilote de f1</p>
 
-
-
-            
                     </div>
                 </div>
         </div>

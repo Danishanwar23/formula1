@@ -41,8 +41,8 @@ if (isset($_GET['search_value'])) {
                     <li><a href="index.php">HOME</a></li>
                     <li><a href="Voitures.php">VOITURES</a></li>
                     <li><a href="Circuit.php">CIRCUITS</a></li>
-                    <li><a href="#">CONCEPTION</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">Mention legal</a></li>
                 </ul>
             </div>
 

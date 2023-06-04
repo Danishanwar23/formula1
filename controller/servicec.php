@@ -5,75 +5,6 @@
 include_once '../config.php';
 class servic{
 
-	/*
-//	function afficherenclos(){
-		$sql="SELECT * FROM enclos
-
-		";
-	//	$db=config::getConnexion();
-	//	try{
-			$liste=$db->query($sql);
-			return $liste;
-	//	}
-	//	catch(Exception $e){
-	//		die("erreur:".$e->getMessage());
-	//	}
-	//}
-	  // function supprimerenclos($numadh){
- 		$sql="DELETE  FROM enclos WHERE `id`= $numadh ";
-	//	$db=config::getConnexion();
-	//	try{
-		//	$liste=$db->query($sql);
-
-     //   }catch(Exception $e){
-	//		die("erreur:".$e->getMessage());
- //  }
-//}
-
- //function Modifierser($ser)
- //{
- $sqlc= "UPDATE `enclos` SET superficie=:superficie,dure=:datee WHERE id=:id  ";
- //$db=config::getConnexion();
-// try{ $recipesStatement = $db->prepare($sqlc);
- 	//$recipesStatement->execute([ 'superficie' =>$ser->getsuperficie(),
-	 							 'datee' =>$ser->getduree(), 		            
- 					              'id' =>$ser->getid(),
- 	//	         ]);
- //}
-  catch(Exception $e){ 
-	
- 			 die("erreur:".$e->getMessage());
- //}
-
- //}
-
- function Ajouter($ser){
- $sql= "INSERT INTO `enclos` VALUES (:id, :superficie,:duree,:image,:id_type)";
- $db=config::getConnexion();
- try{ $recipesStatement = $db->prepare($sql);
- 	$recipesStatement->execute([ 'id'=>$ser->getid(),
- 		            'superficie' =>$ser->getsuperficie(),
- 		            'duree'=>$ser->getduree(),
- 					'image'=>$ser->getimage(),
- 		            'id_type'=>$ser->getid_type(),
- 		           
- 	//]);
- // }
-  catch(Exception $e){ 
- 	
- 			 die("erreur:".$e->getMessage());
-
-// }
-
- //}
-
-
- 
-*/
-
-
-
-
 function getEquipeById($id) {
     $sql = "SELECT * FROM equipe WHERE id = :id";
     $db = config::getConnexion();
@@ -87,10 +18,6 @@ function getEquipeById($id) {
         die("Erreur: " . $e->getMessage());
     }
 }
-
-
-
-
 
 function getCircuitById($id) {
     $sql = "SELECT * FROM circuit WHERE id = :id";
@@ -251,7 +178,6 @@ catch(Exception $e){
         die("erreur:".$e->getMessage());
 
 }
-
 }
 
 
@@ -269,37 +195,14 @@ function affichercircuit(){
     }
 }
 
-
-
-
-// function Ajouterreservation($ser)
-// {
-//     $sql = "INSERT INTO `reservation` VaLUES (:date`, :reference`, :id_circuit`, :id_equipe`, :id_client`)";
-//     $db = config::getConnexion();
-//     try {
-//         $recipesStatement = $db->prepare($sql);
-//         $recipesStatement->execute([
-//             'id' => $ser->getid(),
-//             'date' => $ser->getdate(),
-//             'reference' => $ser->getreference(),
-//             'id_circuit' => $ser->getid_circuit(),
-//             'id_equipe' => $ser->getid_equipe(),
-//             'id_client' => $ser->getid_client(),
-//         ]);
-//     } catch (Exception $e) {
-//         die("erreur:" . $e->getMessage());
-//     }
-// }
-
-
 function Ajouterreservation($ser) {
-    $sql = "INSERT INTO `reservation` (`id`, `date`, `reference`, `id_circuit`, `id_equipe`, `id_client`)
-            VALUES (:id, :date, :reference, :id_circuit, :id_equipe, :id_client)";
+    
+    $sql = "INSERT INTO `reservation` ( `date`, `reference`, `id_circuit`, `id_equipe`, `id_client`)
+            VALUES (:date, :reference, :id_circuit, :id_equipe, :id_client)";
     $db = config::getConnexion();
     try {
         $recipesStatement = $db->prepare($sql);
         $recipesStatement->execute([
-            ':id' => $ser->getid(),
             ':date' => $ser->getdate(),
             ':reference' => $ser->getreference(),
             ':id_circuit' => $ser->getid_circuit(),
@@ -310,9 +213,6 @@ function Ajouterreservation($ser) {
         die("erreur:".$e->getMessage());
     }
 }
-
-
-
 
     
 function afficherreservation(){
@@ -366,8 +266,6 @@ function recherchevoit($search_value)
         die('Erreur: '.$e->getMessage());
     }
 }
-
-
 
     
 function affichervoitavecplusreservation(){
