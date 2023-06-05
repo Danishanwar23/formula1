@@ -24,25 +24,55 @@ if (isset($_GET['search_value'])) {
 
 <!DOCTYPE html>
 <html lang="fr">
+    
 <head>
     <title>resaweb</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+    .logo-img {
+        width: 70px;
+        position: absolute;
+        top: 30px;
+        left: 355px;
+        height: 50px;
+    }
+
+    .logo-text {
+        margin-left: 80px;
+        color: #00d9e1;
+        font-size: 35px;
+        font-family: Arial;
+        padding-top: 10px;
+        margin-top: 5px;
+    }
+</style>
 </head>
 <body>
 
-    <div class="main">
+   
+   
+
+   
+<div class="main" style="    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(image/F1.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;" >
         <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">FAST ONE</h2>
-            </div>
+         
+<div class="icon">
+    <img src="image/fast one.jpg" alt="Fast One Logo" class="logo-img">
+    <!-- <h2 class="logo-text">FAST ONE</h2> -->
+</div>
 
             <div class="menu">
             <ul>
-                    <li><a href="index.php">HOME</a></li>
+            <ul>
+                    <li><a href="index.php">ACCEUIL</a></li>
                     <li><a href="Voitures.php">VOITURES</a></li>
                     <li><a href="Circuit.php">CIRCUITS</a></li>
-                    <li><a href="#">CONCEPTION</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="information.html">INFORMATION</a></li>
+                </ul>
                 </ul>
             </div>
 
@@ -108,15 +138,31 @@ if (isset($_GET['search_value'])) {
 <br>
 
 <br><br>
+<style>
+        /* Animation for the title */
+        @keyframes titleAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Apply the animation to the title */
+        .title-animation {
+            animation: titleAnimation 2s linear infinite;
+        }
+    </style>
 
 
-<h1 style="color: #00d9e1; text-align: center; margin-top: 20px;">--- La liste des voitures ---</h1>
 
+
+<h1 class="title-animation" style="color: #00d9e1; text-align: center;  margin-top: 20px; margin-left: 90px;">--- La liste des voitures  ---</h1>
 <div class="rectangle-container">
-    
+
     <?php foreach($prod as $pro): ?>   
+       
         <div class="rectangle" style="width: 300px; height: 300px; margin: 10px; background-color: #f1f1f1; border-radius: 8px; overflow: hidden; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
-            <a href="getvoiture.php?id=<?php echo $pro['id']; ?>">
+        
+            <a href="res.php?id=<?php echo $pro['id']; ?>">
                 <div class="rectangle-image" style="position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
                     <img src="image/<?php echo $pro['image']; ?>" alt="Description de l'image" style="max-width: 100%; max-height: 100%; object-fit: cover;">
                     <img src="image/<?php echo $pro['logo']; ?>" alt="Description de l'image" style="position: absolute; top: 0px; right: 25px; width: 50px; height: 50px; object-fit: cover;">
@@ -146,9 +192,14 @@ if (isset($_GET['search_value'])) {
                 </div>
             </a>
         </div>
+        
     <?php endforeach; ?>
-</div>
+</div></div>
 
+    
+    
+
+   
       
 
 <br>

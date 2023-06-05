@@ -28,22 +28,45 @@ if (isset($_GET['id'])) {
     <title>resaweb</title>
     <link rel="stylesheet" href="style.css">
     
+   
+ 
+    <style>
+    .logo-img {
+        width: 70px;
+        position: absolute;
+        top: 30px;
+        left: 355px;
+        height: 50px;
+    }
+
+    .logo-text {
+        margin-left: 80px;
+        color: #00d9e1;
+        font-size: 35px;
+        font-family: Arial;
+        padding-top: 10px;
+        margin-top: 5px;
+    }
+</style>
 </head>
 <body>
 
     <div class="main">
         <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">FAST ONE</h2>
-            </div>
+           
+<div class="icon">
+    <img src="image/fast one.jpg" alt="Fast One Logo" class="logo-img">
+    <h2 class="logo-text">FAST ONE</h2>
+</div>
 
             <div class="menu">
                 <ul>
-                    <li><a href="index.php">HOME</a></li>
-                    <li><a href="#">VOITURE</a></li>
-                    <li><a href="#">SERVICE</a></li>
-                    <li><a href="#">CONCEPTION</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                <ul>
+                    <li><a href="index.php">ACCEUIL</a></li>
+                    <li><a href="Voitures.php">VOITURES</a></li>
+                    <li><a href="Circuit.php">CIRCUITS</a></li>
+                    <li><a href="information.html">INFORMATION</a></li>
+                </ul>
                 </ul>
             </div>
 
@@ -57,6 +80,9 @@ if (isset($_GET['id'])) {
             <h1>Réservez votre<br><span>formule 1</span> <br>Pour une course</h1>
             <p class="par">Choisissez la voiture de votre écuries préféré <br> et clizer vous dans la peau d'un vrais pilote de f1</p>
 
+
+
+            
                     </div>
                 </div>
         </div>
@@ -141,8 +167,9 @@ if (isset($_GET['id'])) {
         <div class="row" style="width: 40%;">
         <img class="car-image" src="./uploads/<?php echo $car['image']; ?>" alt="Description de l'image">
         <br>
-        <p style="margin-top: 100px; margin-right: 50px; text-align: center; font-size: 18px; font-weight: bold;"><?php echo $car['nom']; ?></p>
-    
+        <p style="margin-top: 100px; margin-right: 50px; text-align: center; font-size: 18px; font-weight: bold;">nom de circuit est :<?php echo $car['nom']; ?></p>
+        <p style="margin-top: 20px; margin-right: 50px; text-align: center; font-size: 18px; font-weight: bold;">description :<?php echo $car['description']; ?></p>
+
 
         </div>
         <iframe src="https://www.google.com/maps/d/embed?mid=1h-sOdukyAEyCbtZz4fRm9ePn1vg3htw&ehbc=2E312F" width="400" height="450"></iframe>

@@ -26,22 +26,49 @@ if (isset($_GET['search_value'])) {
 <head>
     <title>resaweb</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+    .logo-img {
+        width: 70px;
+        position: absolute;
+        top: 30px;
+        left: 355px;
+        height: 50px;
+    }
+
+    .logo-text {
+        margin-left: 80px;
+        color: #00d9e1;
+        font-size: 35px;
+        font-family: Arial;
+        padding-top: 10px;
+        margin-top: 5px;
+    }
+</style>
 </head>
 <body>
 
-    <div class="main">
+     
+<div class="main" style="    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(image/backcircuit.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;" >
         <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">FAST ONE</h2>
-            </div>
+            
+<div class="icon">
+    <img src="image/fast one.jpg" alt="Fast One Logo" class="logo-img">
+    <!-- <h2 class="logo-text">FAST ONE</h2> -->
+</div>
 
             <div class="menu">
             <ul>
-                    <li><a href="index.php">HOME</a></li>
+            <ul>
+                    <li><a href="index.php">ACCEUIL</a></li>
                     <li><a href="Voitures.php">VOITURES</a></li>
                     <li><a href="Circuit.php">CIRCUITS</a></li>
-                    <li><a href="#">CONCEPTION</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="information.html">INFORMATION</a></li>
+                </ul>
+                  
                 </ul>
             </div>
 
@@ -103,8 +130,7 @@ if (isset($_GET['search_value'])) {
 
 <div class="rectangle-container" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
     <?php foreach($circuits as $pro): ?>   
-        <div class="rectangle" style="width: 200px; height: 250px; margin: 10px; background-color: #f1f1f1; border-radius: 8px; overflow: hidden; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); display: flex; align-items: center; justify-content: center;">
-            <a href="GetOneCircuit.php?id=<?php echo $pro['id']; ?>">
+        <div class="rectangle animated fadeIn" style="width: 200px; height: 250px; margin: 10px; background-color: #f1f1f1; border-radius: 8px; overflow: hidden; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); display: flex; align-items: center; justify-content: center;">            <a href="GetOneCircuit.php?id=<?php echo $pro['id']; ?>">
                 <div class="rectangle-image" style="position: relative; width: 100%; height: 100%;">
                     <img src="image/<?php echo $pro['image']; ?>" alt="Description de l'image" style="width: 100%; height: 100%; object-fit: cover;">
                     <!-- <iframe src="https://www.google.com/maps/d/embed?mid=1h-sOdukyAEyCbtZz4fRm9ePn1vg3htw&ehbc=2E312F" width="400" height="250"></iframe> -->

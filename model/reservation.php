@@ -6,18 +6,23 @@ private $reference;
 private $date;
 private $id_circuit;
 private $id_equipe;
-private $id_client;
+private $nom;
+private $prenom;
+private $mail;
 
 
 
-public  function __construct($id,$date,$reference,$id_circuit,$id_equipe,$id_client)
+public  function __construct($id,$date,$reference,$id_circuit,$id_equipe,$nom,$prenom,$mail)
 {
 	$this->id=$id;
     $this->date=$date;
     $this->reference=$reference;
     $this->id_circuit=$id_circuit;
-    $this->id_equipe=$id_equipe;
-    $this->id_client=$id_client;
+	$this->id_equipe=$id_equipe;
+    $this->nom=$nom;
+	$this->prenom=$prenom;
+	$this->mail=$mail;
+
 
 }
 
@@ -46,10 +51,21 @@ public function getid_equipe()
 	return $this->id_equipe;
 }
 
-public function getid_client()
+public function getnom()
 {
-	return $this->id_client;
+	return $this->nom;
 }
+
+public function getprenom()
+{
+	return $this->prenom;
+}
+
+public function getmail()
+{
+	return $this->mail;
+}
+
 
 
 }

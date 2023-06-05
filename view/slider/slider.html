@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="slider.css">
+    <script src="slider.js"></script>
+</head>
+<body>
+    
+    <div class="slider">
+        <div class="slide">
+          <img src="img/slideimg1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+          <img src="img/slideimg2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+          <img src="img/slideimg3.jpg" alt="Slide 3">
+        </div>
+      </div>
+
+      <button onclick="previousSlide()">👈</button>
+      <button onclick="nextSlide()">👉</button>
+      
+      <script>
+        var slides = document.getElementsByClassName("slide");
+        var currentSlide = 0;
+
+        function showSlide(n) {
+          for (var i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+          }
+
+          slides[n].classList.add("active");
+        }
+
+        function nextSlide() {
+          currentSlide++;
+          if (currentSlide >= slides.length) {
+            currentSlide = 0;
+          }
+          showSlide(currentSlide);
+        }
+
+        function previousSlide() {
+          currentSlide--;
+          if (currentSlide < 0) {
+            currentSlide = slides.length - 1;
+          }
+          showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+      </script>
+
+</body>
+</html>
