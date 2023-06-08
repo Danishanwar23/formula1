@@ -9,7 +9,6 @@
     background-position: center;
     background-size: cover;
     height: 100vh;
-    width: 100px;
     display: inline-table;
 }
 
@@ -300,8 +299,8 @@ ul li a:hover{
   }
   
   .rectangle img {
-    max-width: 75%;
-    max-height: 75%;
+    max-width: 89%;
+    max-height: 89%;
     border-radius: 10px;
   }
   

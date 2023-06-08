@@ -57,7 +57,7 @@ if (isset($_GET['search_value'])) {
             
 <div class="icon">
     <img src="image/fast one.jpg" alt="Fast One Logo" class="logo-img">
-    <!-- <h2 class="logo-text">FAST ONE</h2> -->
+
 </div>
 
             <div class="menu">
@@ -133,7 +133,7 @@ if (isset($_GET['search_value'])) {
         <div class="rectangle animated fadeIn" style="width: 200px; height: 250px; margin: 10px; background-color: #f1f1f1; border-radius: 8px; overflow: hidden; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); display: flex; align-items: center; justify-content: center;">            <a href="GetOneCircuit.php?id=<?php echo $pro['id']; ?>">
                 <div class="rectangle-image" style="position: relative; width: 100%; height: 100%;">
                     <img src="image/<?php echo $pro['image']; ?>" alt="Description de l'image" style="width: 100%; height: 100%; object-fit: cover;">
-                    <!-- <iframe src="https://www.google.com/maps/d/embed?mid=1h-sOdukyAEyCbtZz4fRm9ePn1vg3htw&ehbc=2E312F" width="400" height="250"></iframe> -->
+                    <!-- <iframe src="https://www.google.com/maps/d/embed?mid=1h-sOdukyAEyCbtZz4fRm9ePn1vg3htw&ehbc=2E312F&ll=43.74091900566069%2C7.440775489088924&z=14" width="400" height="250"></iframe> -->
 
                     <div class="car-details" style="position: absolute; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 10px; width: 100%;">
                         <span style="font-weight: bold;">Nom: <?php echo $pro['nom']; ?></span>

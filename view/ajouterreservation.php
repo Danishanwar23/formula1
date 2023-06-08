@@ -50,6 +50,6 @@ $headers = 'From: fast.one.resaweb@gmail.com' . "\r\n" .
 
 // Envoyer l'e-mail
 mail($to, $subject, $message, $headers);
-
-header('location:index.php');
+ echo '<span style="color:#1D820D;text-align:center; font-size:30px">Votre réservation a été bien effectuée un mail de confirmation vous sera envoyé! </span>';
+//header('location:index.php');
 ?>

@@ -120,31 +120,11 @@ function generateRandomReference() {
 
           
         </div> 
+        <div class="body-content">
         <div class="content">
-            <h1>Réservez votre<br><span>formule 1</span> <br>Pour une course</h1>
-            <p class="par">Choisissez la voiture de votre écuries préféré <br> et clizer vous dans la peau d'un vrais pilote de f1</p>
-
 
             
-                    </div>
-                </div>
         </div>
-   
- 
-
-        <br>
-        <br>
-        <br>
-
-        <br>
-
-
-        <br>
-        <br>
-        <br>
-
-        <br>
-
 <div class="login-box" >
     <h1 class="title-animation" style="color: #03e9f4; margin-top: -5px; margin-left: 90px;">Reserver</h1>
     <br>
@@ -154,7 +134,6 @@ function generateRandomReference() {
       <div class="user-box">
     
       </div>
-
       <label for="date" style="color: #03e9f4;">Date :</label>
       <br>
       <br>
@@ -163,13 +142,14 @@ function generateRandomReference() {
 
 
 
+      <div class="bloc-input" style="display: flex;">
       <div class="user-box">
       <label for="reference" style="color: #03e9f4;">Référence :</label>
     <input type="text" name="reference" id="reference" value="<?php echo generateRandomReference(); ?>" disabled>
     <br>
     
       </div>
-      
+          
       <div class="user-box">
       <label for="id_equipe" style="color: #03e9f4;">Équipe :</label>
             <select name="id_equipe">
@@ -178,7 +158,10 @@ function generateRandomReference() {
                 <?php endforeach; ?>
             </select>
       </div>
-
+      </div>
+      
+<div class="bloc-input" style="display: flex;">
+    
       <div class="user-box">
       <label for="id_circuit" style="color: #03e9f4;">Circuit :</label>
             <select name="id_circuit">
@@ -193,7 +176,10 @@ function generateRandomReference() {
             <input type="text" name="nom" id="nom" pattern="[A-Z][a-zA-Z]{2,}" title="Le nom doit commencer par une lettre majuscule et avoir une longueur minimale de 3 caractères." required>
 
       </div>
+</div>
 
+<div class="bloc-input" style="display: flex;">
+    
       <div class="user-box">
       <label for="prenom" style="color: #03e9f4;">Prénom :</label>
             <input type="text" name="prenom" id="prenom" pattern="[A-Z][a-zA-Z]{2,}" title="Le prénom doit commencer par une lettre majuscule et avoir une longueur minimale de 3 caractères." required>
@@ -205,6 +191,7 @@ function generateRandomReference() {
             <input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 
       </div>
+</div>
 
 
 
@@ -219,14 +206,34 @@ function generateRandomReference() {
     </a> -->
     </form>
   </div>
+        </div>
+            
+        </div>
+         </div>
+        </div>
+   
+        <br>
+        <br>
+        <br>
+
+        <br>
+
+
+        <br>
+        <br>
+        <br>
+
+        <br>
+
+
 
 
 
   <script>
-        // Get the current date
+        // Obtenir la date actuelle
         var currentDate = new Date().toISOString().split('T')[0];
 
-        // Set the minimum date for the date input
+        // Définir la date minimale pour la saisie de date
         document.getElementById("date").min = currentDate;
     </script>
  

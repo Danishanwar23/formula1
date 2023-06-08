@@ -58,7 +58,7 @@ if (isset($_GET['search_value'])) {
 
             <div class="menu">
             <ul>
-                     <li><a href="index.php">ACCEUIL</a></li>
+                     <li><a href="index.php">ACCUEIL</a></li>
                     <li><a href="Voitures.php">VOITURES</a></li>
                     <li><a href="Circuit.php">CIRCUITS</a></li>
                 </ul>
